@@ -10,8 +10,8 @@ public enum AppPage {
     SIGN_UP("Sign Up", "register"),
     HOME("Home", "");
 
-    private String name;
-    private String prefix;
+    private final String name;
+    private final String prefix;
 
     AppPage(String name, String prefix) {
         this.name = name;

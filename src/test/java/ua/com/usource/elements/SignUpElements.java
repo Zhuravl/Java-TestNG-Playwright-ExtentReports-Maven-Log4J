@@ -5,10 +5,10 @@ import com.microsoft.playwright.Page;
 
 public class SignUpElements extends BaseElements {
 
-    private final Locator emailInput = page.locator("xpath=//input[@name='username']");
-    private final Locator passwordInput = page.locator("xpath=//input[@name='password']");
-    private final Locator firstNameInput = page.locator("xpath=//input[@name='firstName']");
-    private final Locator lastNameInput = page.locator("xpath=//input[@name='lastName']");
+    private final Locator emailInput = page.locator("input[name='username']");
+    private final Locator passwordInput = page.locator("input[name='password']");
+    private final Locator firstNameInput = page.locator("input[name='firstName']");
+    private final Locator lastNameInput = page.locator("input[name='lastName']");
     private final Locator languageDropdown = page.locator("xpath=//label[@for='language']/following-sibling::div");
     private final Locator languageList = page.locator("xpath=//div[contains(@id, 'react-select')]");
     private final Locator signUpButton = page.locator("xpath=//button[contains(@class, 'btn-primary')]");

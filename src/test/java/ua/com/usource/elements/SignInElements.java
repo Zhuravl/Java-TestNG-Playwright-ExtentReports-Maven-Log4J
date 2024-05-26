@@ -5,8 +5,8 @@ import com.microsoft.playwright.Page;
 
 public class SignInElements extends BaseElements {
 
-    private final Locator emailInput = page.locator("xpath=//input[@name='username']");
-    private final Locator passwordInput = page.locator("xpath=//input[@name='password']");
+    private final Locator emailInput = page.locator("input[name='username']");
+    private final Locator passwordInput = page.locator("input[name=\"password\"]");
     private final Locator signInButton = page.locator("xpath=//button[contains(@class, 'btn-primary')]");
 
     public SignInElements(Page page) {

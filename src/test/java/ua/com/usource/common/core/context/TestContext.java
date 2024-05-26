@@ -47,7 +47,7 @@ public class TestContext {
     }
 
     /**
-     * Returns Thread count from context
+     * Returns the threads count from context
      */
     public static String getThreadCount() {
         return getProperty("threadCount", "Thread count");
@@ -80,7 +80,7 @@ public class TestContext {
         String result;
         logger.info("Get " + comment + " from context...");
         String value = System.getProperty(property);
-        result = (value == null || value.equals("") ? null : value);
+        result = (value == null || value.isEmpty() ? null : value);
         logger.info(comment + ": '" + result + "'");
         return result;
     }

@@ -9,11 +9,11 @@ mvn clean test site -Durl=TARGET_URL -Dbrowser=BROWSER_NAME -Dversion=BROWSER_VE
 Where:
  Parameters for the API and UI tests:
  * TARGET_URL — the target site URL
- * BROWSER_NAME — target browser name ('chromium', 'firefox', or 'webkit')
+* BROWSER_NAME — target browser name ('chromium' or 'firefox' or 'webkit')
  * BROWSER_VERSION — browser version, optional (the latest by default)
  * TESTS_SCOPE — test name(s) to execute (e.g. 'MyFirstTest' or 'MyFirstTest#firstMethod' or 'MyFirstTest#firstMethod+secondMethod' or 'MyFirstTest#firstMethod,MySecondTest#firstMethod')
  * DELAY — define an executing delay in millis (e.g. '1000') to enable the debugging mode and launch the browser in the headed mode, optional ('null' by default)
- * THREAD_COUNT — specify how many threads should be allocated for this execution, optional (1 thread by default)
+* THREAD_COUNT — specify how many threads should be allocated for this execution, optional (the one thread by default)
 
 ## An example params for launching the example test using Chrome browser and the default params:
 ```

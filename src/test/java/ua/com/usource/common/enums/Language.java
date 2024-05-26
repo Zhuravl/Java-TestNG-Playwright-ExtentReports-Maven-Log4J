@@ -5,8 +5,8 @@ public enum Language {
     ENGLISH("English", "eng"),
     UKRAINIAN("Українська", "ukr");
 
-    private String name;
-    private String value;
+    private final String name;
+    private final String value;
 
     Language(String name, String value) {
         this.name = name;

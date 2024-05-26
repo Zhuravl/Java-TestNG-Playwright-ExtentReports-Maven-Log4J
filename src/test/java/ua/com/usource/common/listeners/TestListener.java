@@ -2,18 +2,18 @@ package ua.com.usource.common.listeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import ua.com.usource.common.core.helpers.ExtentReportsHelper;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import ua.com.usource.common.core.helpers.ExtentReportsHelper;
 
 /**
  * Class implements the ITestListener interface to collect information for the test execution report
  */
 public class TestListener implements ITestListener {
 
-    private static ExtentReports extent = ExtentReportsHelper.createExtentReports();
-    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    private static final ExtentReports extent = ExtentReportsHelper.createExtentReports();
+    private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
     @Override
     public synchronized void onStart(ITestContext context) {
@@ -43,9 +43,5 @@ public class TestListener implements ITestListener {
     @Override
     public synchronized void onTestSkipped(ITestResult result) {
         test.get().skip(result.getThrowable());
-    }
-
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
     }
 }
